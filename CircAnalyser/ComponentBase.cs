@@ -1,9 +1,5 @@
 ﻿namespace CircAnalyser
 {
-    class Connection
-    {
-
-    }
     public enum PortType
     {
         In,
@@ -12,7 +8,6 @@
         ExternalOut,
         Undefined,
     }
-
 
     public sealed class PortState
     {
@@ -138,7 +133,6 @@
         protected Dictionary<string, Port> p = new Dictionary<string, Port>();
         virtual public string? Name { get; set; }
         virtual public string? Description { get; set; }
-
         public virtual void Tick() { }
         public virtual void PostTick() { }
         public abstract void Update();
@@ -159,7 +153,6 @@
                 AddPort(p);
             }
         }
-
         public Port this[string index]
         {
             get
